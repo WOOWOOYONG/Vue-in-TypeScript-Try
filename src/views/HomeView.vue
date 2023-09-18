@@ -14,21 +14,21 @@ interface Product {
 const products = ref<Product[]>([
   {
     id: 1,
-    title: 'Book1',
-    price: 55,
+    title: 'Book5-Our Tokyo Trip',
+    price: 99,
     inStock: true,
     imageUrl: 'https://i.pinimg.com/564x/a8/13/eb/a813eb1f9ccf91beead9edd5a4e38d4e.jpg'
   },
   {
     id: 2,
-    title: 'Book2',
+    title: 'Book11-Weekend Life Catalog',
     price: 66,
     inStock: true,
     imageUrl: 'https://i.pinimg.com/564x/c1/3f/42/c13f426c367f3d50bac3532addf3aa57.jpg'
   },
   {
     id: 3,
-    title: 'Book3',
+    title: 'Book8-Summber Reading',
     price: 77,
     inStock: false,
     imageUrl: 'https://i.pinimg.com/564x/63/43/23/634323f69b89f57be4b5affffde92194.jpg'
@@ -109,8 +109,9 @@ const handleFilterByStock = (inStock: boolean | null) => {
 <style scoped>
 .shopName {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 40px;
+  font-weight: 700;
 }
 .productList {
   margin: 0 auto;
