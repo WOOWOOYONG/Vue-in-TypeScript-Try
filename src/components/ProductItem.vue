@@ -6,7 +6,10 @@ interface Props {
   imageUrl: string
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+const addToCart = () => {
+  props.inStock ? alert('感謝購買') : alert('已經賣完囉')
+}
 
 // 可以放預設值
 // withDefaults(defineProps<Props>(), {
@@ -23,6 +26,7 @@ defineProps<Props>()
     <h2 class="title">{{ title }}</h2>
     <p class="price">$ {{ price }}</p>
     <p>InStock: {{ inStock ? 'Yes' : 'No' }}</p>
+    <button class="btn" type="button" @click="addToCart">Buy</button>
   </div>
 </template>
 
@@ -41,5 +45,18 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  background-color: rgb(50, 50, 140);
+  color: aliceblue;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
 }
 </style>
